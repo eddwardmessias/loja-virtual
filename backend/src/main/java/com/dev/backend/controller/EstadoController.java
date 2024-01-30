@@ -10,8 +10,8 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
-public class Hello {
+@RequestMapping("/api/estado")
+public class EstadoController {
 
     @GetMapping
     public String hello(){
