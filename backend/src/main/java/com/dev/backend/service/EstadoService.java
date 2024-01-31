@@ -25,7 +25,7 @@ public class EstadoService {
     }
 
     public Estado alterar(Estado estado){
-        estado.setDataCricao(new Date());
+        estado.setDataAtualizacao(new Date());
         return estadoRepository.saveAndFlush(estado);
     }
 

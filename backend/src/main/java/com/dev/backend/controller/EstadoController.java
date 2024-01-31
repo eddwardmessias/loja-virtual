@@ -2,6 +2,7 @@ package com.dev.backend.controller;
 
 import com.dev.backend.entity.Estado;
 import com.dev.backend.service.EstadoService;
+import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,14 +14,10 @@ import java.util.List;
 @RequestMapping("/api/estado")
 public class EstadoController {
 
-    @GetMapping
-    public String hello(){
-        return "Olá mundo Spring" + new Date();
-    }
     @Autowired
     private EstadoService estadoService;
 
-    @GetMapping("/dois")
+    @GetMapping("/")
     public List<Estado> buscarTodos(){
         return estadoService.buscarTodos();
     }
@@ -36,7 +33,7 @@ public class EstadoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> excluir(@PathVariable Long id){
+    public ResponseEntity<Void> excluir(@PathVariable("id") Long id){
         estadoService.excluir(id);
         return ResponseEntity.ok().build();
     }

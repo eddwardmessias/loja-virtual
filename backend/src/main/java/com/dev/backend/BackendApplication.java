@@ -11,10 +11,6 @@ public class BackendApplication {
 
 		SpringApplication.run(BackendApplication.class, args);
 
-		Estado oi = new Estado();
-
-		System.out.println(oi.dataImprimir());
-
 	}
 
 }
