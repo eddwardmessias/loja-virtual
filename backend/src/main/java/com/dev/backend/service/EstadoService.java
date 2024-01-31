@@ -1,7 +1,7 @@
 package com.dev.backend.service;
 
-import com.dev.backend.EstadoRepository;
 import com.dev.backend.entity.Estado;
+import com.dev.backend.repository.EstadoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
