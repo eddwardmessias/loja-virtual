@@ -13,7 +13,7 @@ import java.util.List;
 public class EstadoController {
 
     @Autowired
-    EstadoService estadoService;
+    private EstadoService estadoService;
 
     @GetMapping("/")
     private List<Estado> buscarTodos(){
